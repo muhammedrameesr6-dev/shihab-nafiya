@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <circle cx="32" cy="32" r="30" fill="#F2E5D0" stroke="#484932" stroke-width="2"/>
+  <circle cx="32" cy="32" r="26" fill="none" stroke="#A68038" stroke-width="1" stroke-dasharray="2,2"/>
+  <text x="32" y="38" font-family="Georgia, serif" font-size="20" font-style="italic" font-weight="bold" fill="#484932" text-anchor="middle">S&amp;N</text>
+</svg>
