@@ -1082,6 +1082,83 @@ body.pdf-capturing .hero-overlay,body.pdf-capturing #main{transition:none!import
 .bc-download-btn svg {
   display: block;
 }
+
+/* ========================================================
+   MEDIA PARTNER: LAMIA STUDIO DXB
+   ======================================================== */
+.foot-partner-wrap {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 28px;
+  padding-top: 26px;
+  border-top: 1px solid rgba(242, 229, 208, 0.14);
+}
+.foot-partner-label {
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--gold2, #E0C68D);
+  margin-bottom: 12px;
+  opacity: 0.95;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.foot-partner-label::before,
+.foot-partner-label::after {
+  content: "";
+  width: 36px;
+  height: 1px;
+  background: rgba(224, 198, 141, 0.4);
+  display: inline-block;
+}
+.foot-partner-link {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  padding: 14px 28px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(224, 198, 141, 0.28);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(6px);
+}
+.foot-partner-link:hover {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(224, 198, 141, 0.6);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -4px rgba(0, 0, 0, 0.4), 0 0 16px rgba(224, 198, 141, 0.2);
+}
+.foot-partner-logo {
+  max-width: 140px;
+  width: auto;
+  height: auto;
+  max-height: 85px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.35));
+  transition: transform 0.3s ease;
+}
+.foot-partner-link:hover .foot-partner-logo {
+  transform: scale(1.04);
+}
+.foot-partner-sub {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  color: rgba(242, 229, 208, 0.75);
+  margin-top: 8px;
+  transition: color 0.2s ease;
+}
+.foot-partner-link:hover .foot-partner-sub {
+  color: #FAF5EC;
+  text-decoration: underline;
+}
 </style>
 </head>
 <body>
@@ -1564,6 +1641,15 @@ body.pdf-capturing .hero-overlay,body.pdf-capturing #main{transition:none!import
        target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" style="display:inline-block;vertical-align:middle;margin-right:6px;"><path d="M12 16l-4-4h3V4h2v8h3l-4 4Z"/><path d="M4 18h16v2H4z"/></svg>
       Download Invitation
+    </a>
+  </div>
+
+  <!-- MEDIA PARTNER: LAMIA STUDIO DXB -->
+  <div class="foot-partner-wrap no-pdf">
+    <div class="foot-partner-label">Media Partner</div>
+    <a href="https://lamiastudiodxb.ae/" target="_blank" rel="noopener" class="foot-partner-link" title="Lamia Studio — Official Media Partner">
+      <img src="assets/lamia-logo.png" alt="Lamia Studio" class="foot-partner-logo" loading="lazy">
+      <span class="foot-partner-sub">www.lamiastudiodxb.ae</span>
     </a>
   </div>
 
