@@ -1092,71 +1092,91 @@ body.pdf-capturing .hero-overlay,body.pdf-capturing #main{transition:none!import
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 28px;
-  padding-top: 26px;
-  border-top: 1px solid rgba(242, 229, 208, 0.14);
+  margin-top: 32px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(242, 229, 208, 0.16);
 }
 .foot-partner-label {
   font-family: 'Cinzel', serif;
-  font-size: 10px;
-  letter-spacing: 0.32em;
+  font-size: 11px;
+  letter-spacing: 0.35em;
   text-transform: uppercase;
   color: var(--gold2, #E0C68D);
-  margin-bottom: 12px;
+  margin-bottom: 16px;
   opacity: 0.95;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
 }
 .foot-partner-label::before,
 .foot-partner-label::after {
   content: "";
-  width: 36px;
+  width: 44px;
   height: 1px;
-  background: rgba(224, 198, 141, 0.4);
+  background: rgba(224, 198, 141, 0.45);
   display: inline-block;
 }
-.foot-partner-link {
+.foot-partner-card {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
   text-decoration: none;
-  padding: 14px 28px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(224, 198, 141, 0.28);
-  border-radius: 16px;
+  background: #FFFFFF;
+  border: 1px solid rgba(166, 128, 56, 0.35);
+  border-radius: 18px;
+  padding: 18px 24px 14px;
+  box-shadow: 0 12px 32px -4px rgba(0, 0, 0, 0.35),
+              0 4px 12px rgba(166, 128, 56, 0.12);
   transition: all 0.3s ease;
-  backdrop-filter: blur(6px);
+  max-width: 240px;
+  width: 100%;
 }
-.foot-partner-link:hover {
-  background: rgba(255, 255, 255, 0.09);
-  border-color: rgba(224, 198, 141, 0.6);
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px -4px rgba(0, 0, 0, 0.4), 0 0 16px rgba(224, 198, 141, 0.2);
+.foot-partner-card:hover {
+  transform: translateY(-3px) scale(1.02);
+  border-color: rgba(166, 128, 56, 0.65);
+  box-shadow: 0 16px 40px -4px rgba(0, 0, 0, 0.45),
+              0 6px 18px rgba(166, 128, 56, 0.25);
+}
+.fpc-logo-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .foot-partner-logo {
   max-width: 140px;
-  width: auto;
+  width: 100%;
   height: auto;
-  max-height: 85px;
-  object-fit: contain;
-  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.35));
-  transition: transform 0.3s ease;
+  display: block;
 }
-.foot-partner-link:hover .foot-partner-logo {
-  transform: scale(1.04);
+.fpc-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(72, 73, 50, 0.12);
+  width: 100%;
 }
-.foot-partner-sub {
+.fpc-name {
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  color: #3b3e2b;
+  text-transform: uppercase;
+}
+.fpc-url {
   font-family: 'Cormorant Garamond', Georgia, serif;
   font-style: italic;
   font-size: 13px;
-  letter-spacing: 0.08em;
-  color: rgba(242, 229, 208, 0.75);
-  margin-top: 8px;
+  letter-spacing: 0.05em;
+  color: #A68038;
+  margin-top: 2px;
   transition: color 0.2s ease;
 }
-.foot-partner-link:hover .foot-partner-sub {
-  color: #FAF5EC;
+.foot-partner-card:hover .fpc-url {
+  color: #7d5e22;
   text-decoration: underline;
 }
 </style>
@@ -1647,9 +1667,14 @@ body.pdf-capturing .hero-overlay,body.pdf-capturing #main{transition:none!import
   <!-- MEDIA PARTNER: LAMIA STUDIO DXB -->
   <div class="foot-partner-wrap no-pdf">
     <div class="foot-partner-label">Media Partner</div>
-    <a href="https://lamiastudiodxb.ae/" target="_blank" rel="noopener" class="foot-partner-link" title="Lamia Studio — Official Media Partner">
-      <img src="assets/lamia-logo.png" alt="Lamia Studio" class="foot-partner-logo" loading="lazy">
-      <span class="foot-partner-sub">www.lamiastudiodxb.ae</span>
+    <a href="https://lamiastudiodxb.ae/" target="_blank" rel="noopener" class="foot-partner-card" title="Lamia Studio — Official Media Partner">
+      <div class="fpc-logo-box">
+        <img src="assets/lamia-card.png" alt="Lamia Studio — Media Partner" class="foot-partner-logo" loading="lazy">
+      </div>
+      <div class="fpc-meta">
+        <span class="fpc-name">LAMIA STUDIO</span>
+        <span class="fpc-url">www.lamiastudiodxb.ae &nearr;</span>
+      </div>
     </a>
   </div>
 
