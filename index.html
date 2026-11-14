@@ -1084,6 +1084,149 @@ body.pdf-capturing .hero-overlay,body.pdf-capturing #main{transition:none!import
 }
 
 /* ========================================================
+   MEDIA PARTNER SECTION (LAMIA STUDIO DXB)
+   ======================================================== */
+.media-partner-section {
+  position: relative;
+  padding: 80px 20px 90px;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+.media-partner-inner {
+  width: 100%;
+  max-width: 580px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.mp-card-frame {
+  position: relative;
+  background: #FFFFFF;
+  border: 1px solid rgba(72, 73, 50, 0.16);
+  border-radius: 20px;
+  padding: 44px 32px 38px;
+  box-shadow: 0 16px 44px -8px rgba(72, 73, 50, 0.12),
+              0 4px 16px rgba(0, 0, 0, 0.04);
+  margin-top: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.mp-card-frame:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 22px 50px -8px rgba(72, 73, 50, 0.16),
+              0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+.mp-card-frame::before {
+  content: "";
+  position: absolute;
+  inset: 10px;
+  border: 1px solid rgba(166, 128, 56, 0.22);
+  border-radius: 12px;
+  pointer-events: none;
+}
+
+.mp-logo-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.mp-logo-link {
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+
+.mp-logo-link:hover {
+  transform: scale(1.04);
+}
+
+.mp-logo-img {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(72, 73, 50, 0.10);
+  background: #FFFFFF;
+  display: block;
+}
+
+.mp-title {
+  font-family: 'Cinzel', serif;
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  color: #2D2F22;
+  margin: 0 0 6px;
+  text-transform: uppercase;
+}
+
+.mp-desc {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: 17px;
+  color: #54573D;
+  margin: 0 0 24px;
+  letter-spacing: 0.04em;
+}
+
+.mp-action-row {
+  display: flex;
+  justify-content: center;
+}
+
+.mp-link-btn {
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #FAF5EC;
+  background: #484932;
+  text-decoration: none;
+  padding: 13px 30px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 14px rgba(72, 73, 50, 0.2);
+  transition: all 0.25s ease;
+}
+
+.mp-link-btn:hover {
+  background: #363725;
+  color: #FAF5EC;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(72, 73, 50, 0.28);
+}
+
+.mp-link-btn svg {
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .media-partner-section {
+    padding: 60px 16px 70px;
+  }
+  .mp-card-frame {
+    padding: 34px 18px 28px;
+  }
+  .mp-logo-img {
+    width: 150px;
+    height: 150px;
+  }
+  .mp-title {
+    font-size: 18px;
+  }
+}
+
+/* ========================================================
    MEDIA PARTNER: LAMIA STUDIO DXB
    ======================================================== */
 .foot-partner-wrap {
@@ -1274,6 +1417,7 @@ body.pdf-capturing .hero-overlay,body.pdf-capturing #main{transition:none!import
     <a href="#family">Family</a>
     <a href="#wishes">RSVP</a>
     <a href="#compliments">Compliments</a>
+    <a href="#media-partner">Media Partner</a>
   </div>
 </nav>
 
@@ -1637,6 +1781,34 @@ body.pdf-capturing .hero-overlay,body.pdf-capturing #main{transition:none!import
           <img src="assets/brand-qr-hd.png" alt="Unique World QR Code" class="bc-qr-img" loading="lazy">
         </div>
         <span class="bc-qr-hint">SCAN FOR LOCATION</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MEDIA PARTNER SECTION -->
+<section class="media-partner-section" id="media-partner">
+  <div class="media-partner-inner reveal">
+    <p class="s-label">Official Coverage</p>
+    <h2 class="s-title">Media<br><em>Partner</em></h2>
+    <div class="s-rule"></div>
+
+    <div class="mp-card-frame">
+      <div class="mp-logo-box">
+        <a href="https://lamiastudiodxb.ae/" target="_blank" rel="noopener" class="mp-logo-link" title="Visit Lamia Studio Website">
+          <img src="assets/lamia-card.png" alt="Lamia Studio — Official Media Partner" class="mp-logo-img" loading="lazy">
+        </a>
+      </div>
+
+      <div class="mp-details">
+        <h3 class="mp-title">LAMIA STUDIO</h3>
+        <p class="mp-desc">Official Wedding &amp; Event Media Partner</p>
+        <div class="mp-action-row">
+          <a href="https://lamiastudiodxb.ae/" target="_blank" rel="noopener" class="mp-link-btn">
+            <span>Visit Website</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </div>
       </div>
     </div>
   </div>
