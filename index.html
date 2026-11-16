@@ -1084,7 +1084,7 @@ body.pdf-capturing .hero-overlay,body.pdf-capturing #main{transition:none!import
 }
 
 /* ========================================================
-   MEDIA PARTNER SECTION (LAMIA STUDIO DXB)
+   MEDIA PARTNER SECTION (LAMIA STUDIO & MOJO MOTIONS)
    ======================================================== */
 .media-partner-section {
   position: relative;
@@ -1099,9 +1099,16 @@ body.pdf-capturing .hero-overlay,body.pdf-capturing #main{transition:none!import
 
 .media-partner-inner {
   width: 100%;
-  max-width: 580px;
+  max-width: 860px;
   margin: 0 auto;
   text-align: center;
+}
+
+.mp-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  margin-top: 32px;
 }
 
 .mp-card-frame {
@@ -1109,12 +1116,16 @@ body.pdf-capturing .hero-overlay,body.pdf-capturing #main{transition:none!import
   background: #FFFFFF;
   border: 1px solid rgba(72, 73, 50, 0.16);
   border-radius: 20px;
-  padding: 44px 32px 38px;
+  padding: 38px 24px 32px;
   box-shadow: 0 16px 44px -8px rgba(72, 73, 50, 0.12),
               0 4px 16px rgba(0, 0, 0, 0.04);
-  margin-top: 30px;
+  margin-top: 0;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .mp-card-frame:hover {
@@ -1136,7 +1147,8 @@ body.pdf-capturing .hero-overlay,body.pdf-capturing #main{transition:none!import
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 22px;
+  margin-bottom: 20px;
+  width: 100%;
 }
 
 .mp-logo-link {
@@ -1149,20 +1161,27 @@ body.pdf-capturing .hero-overlay,body.pdf-capturing #main{transition:none!import
 }
 
 .mp-logo-img {
-  width: 180px;
-  height: 180px;
-  object-fit: contain;
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
   border-radius: 14px;
   box-shadow: 0 6px 20px rgba(72, 73, 50, 0.10);
   background: #FFFFFF;
   display: block;
 }
 
+.mp-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
 .mp-title {
   font-family: 'Cinzel', serif;
-  font-size: 21px;
+  font-size: 19px;
   font-weight: 600;
-  letter-spacing: 0.24em;
+  letter-spacing: 0.22em;
   color: #2D2F22;
   margin: 0 0 6px;
   text-transform: uppercase;
@@ -1171,15 +1190,17 @@ body.pdf-capturing .hero-overlay,body.pdf-capturing #main{transition:none!import
 .mp-desc {
   font-family: 'Cormorant Garamond', Georgia, serif;
   font-style: italic;
-  font-size: 17px;
+  font-size: 16px;
   color: #54573D;
-  margin: 0 0 24px;
+  margin: 0 0 22px;
   letter-spacing: 0.04em;
+  min-height: 24px;
 }
 
 .mp-action-row {
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
 .mp-link-btn {
@@ -1190,7 +1211,7 @@ body.pdf-capturing .hero-overlay,body.pdf-capturing #main{transition:none!import
   color: #FAF5EC;
   background: #484932;
   text-decoration: none;
-  padding: 13px 30px;
+  padding: 12px 28px;
   border-radius: 999px;
   display: inline-flex;
   align-items: center;
@@ -1210,24 +1231,34 @@ body.pdf-capturing .hero-overlay,body.pdf-capturing #main{transition:none!import
   display: block;
 }
 
-@media (max-width: 600px) {
+.mp-insta-btn:hover {
+  background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+  box-shadow: 0 6px 20px rgba(225, 48, 108, 0.35);
+}
+
+@media (max-width: 680px) {
   .media-partner-section {
     padding: 60px 16px 70px;
   }
+  .mp-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    max-width: 420px;
+  }
   .mp-card-frame {
-    padding: 34px 18px 28px;
+    padding: 32px 18px 26px;
   }
   .mp-logo-img {
-    width: 150px;
-    height: 150px;
+    width: 140px;
+    height: 140px;
   }
   .mp-title {
-    font-size: 18px;
+    font-size: 17px;
   }
 }
 
 /* ========================================================
-   MEDIA PARTNER: LAMIA STUDIO DXB
+   MEDIA PARTNERS IN FOOTER
    ======================================================== */
 .foot-partner-wrap {
   grid-column: 1 / -1;
@@ -1259,6 +1290,14 @@ body.pdf-capturing .hero-overlay,body.pdf-capturing #main{transition:none!import
   background: rgba(224, 198, 141, 0.45);
   display: inline-block;
 }
+.foot-partner-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+  width: 100%;
+  max-width: 540px;
+}
 .foot-partner-card {
   display: inline-flex;
   flex-direction: column;
@@ -1267,10 +1306,11 @@ body.pdf-capturing .hero-overlay,body.pdf-capturing #main{transition:none!import
   background: #FFFFFF;
   border: 1px solid rgba(166, 128, 56, 0.35);
   border-radius: 18px;
-  padding: 18px 24px 14px;
+  padding: 16px 20px 14px;
   box-shadow: 0 12px 32px -4px rgba(0, 0, 0, 0.35),
               0 4px 12px rgba(166, 128, 56, 0.12);
   transition: all 0.3s ease;
+  flex: 1 1 200px;
   max-width: 240px;
   width: 100%;
 }
@@ -1285,12 +1325,21 @@ body.pdf-capturing .hero-overlay,body.pdf-capturing #main{transition:none!import
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 60px;
 }
 .foot-partner-logo {
-  max-width: 140px;
-  width: 100%;
+  max-width: 120px;
   height: auto;
+  max-height: 54px;
+  object-fit: contain;
   display: block;
+}
+.fpc-logo-sq {
+  width: 54px;
+  height: 54px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 .fpc-meta {
   display: flex;
@@ -1417,7 +1466,7 @@ body.pdf-capturing .hero-overlay,body.pdf-capturing #main{transition:none!import
     <a href="#family">Family</a>
     <a href="#wishes">RSVP</a>
     <a href="#compliments">Compliments</a>
-    <a href="#media-partner">Media Partner</a>
+    <a href="#media-partner">Media Partners</a>
   </div>
 </nav>
 
@@ -1790,24 +1839,51 @@ body.pdf-capturing .hero-overlay,body.pdf-capturing #main{transition:none!import
 <section class="media-partner-section" id="media-partner">
   <div class="media-partner-inner reveal">
     <p class="s-label">Official Coverage</p>
-    <h2 class="s-title">Media<br><em>Partner</em></h2>
+    <h2 class="s-title">Media<br><em>Partners</em></h2>
     <div class="s-rule"></div>
 
-    <div class="mp-card-frame">
-      <div class="mp-logo-box">
-        <a href="https://lamiastudiodxb.ae/" target="_blank" rel="noopener" class="mp-logo-link" title="Visit Lamia Studio Website">
-          <img src="assets/lamia-card.png" alt="Lamia Studio — Official Media Partner" class="mp-logo-img" loading="lazy">
-        </a>
+    <div class="mp-grid">
+      <!-- Media Partner 1: Lamia Studio -->
+      <div class="mp-card-frame">
+        <div class="mp-logo-box">
+          <a href="https://lamiastudiodxb.ae/" target="_blank" rel="noopener" class="mp-logo-link" title="Visit Lamia Studio Website">
+            <img src="assets/lamia-card.png" alt="Lamia Studio — Official Media Partner" class="mp-logo-img" loading="lazy">
+          </a>
+        </div>
+
+        <div class="mp-details">
+          <h3 class="mp-title">LAMIA STUDIO</h3>
+          <p class="mp-desc">Official Wedding &amp; Event Media Partner</p>
+          <div class="mp-action-row">
+            <a href="https://lamiastudiodxb.ae/" target="_blank" rel="noopener" class="mp-link-btn" title="Visit Lamia Studio Website">
+              <span>Visit Website</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
       </div>
 
-      <div class="mp-details">
-        <h3 class="mp-title">LAMIA STUDIO</h3>
-        <p class="mp-desc">Official Wedding &amp; Event Media Partner</p>
-        <div class="mp-action-row">
-          <a href="https://lamiastudiodxb.ae/" target="_blank" rel="noopener" class="mp-link-btn">
-            <span>Visit Website</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      <!-- Media Partner 2: Mojo Motions -->
+      <div class="mp-card-frame">
+        <div class="mp-logo-box">
+          <a href="https://www.instagram.com/mojomotions?dlrf=b3hzZWcxMnF0ZGwz" target="_blank" rel="noopener" class="mp-logo-link" title="Follow Mojo Motions on Instagram">
+            <img src="assets/mojomotions-card.jpg" alt="Mojo Motions — Official Media Partner" class="mp-logo-img" loading="lazy">
           </a>
+        </div>
+
+        <div class="mp-details">
+          <h3 class="mp-title">MOJO MOTIONS</h3>
+          <p class="mp-desc">Portraying Happiness &middot; Photography &amp; Films</p>
+          <div class="mp-action-row">
+            <a href="https://www.instagram.com/mojomotions?dlrf=b3hzZWcxMnF0ZGwz" target="_blank" rel="noopener" class="mp-link-btn mp-insta-btn" title="Follow Mojo Motions on Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+              <span>Instagram</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -1836,18 +1912,32 @@ body.pdf-capturing .hero-overlay,body.pdf-capturing #main{transition:none!import
     </a>
   </div>
 
-  <!-- MEDIA PARTNER: LAMIA STUDIO DXB -->
+  <!-- MEDIA PARTNERS IN FOOTER -->
   <div class="foot-partner-wrap no-pdf">
-    <div class="foot-partner-label">Media Partner</div>
-    <a href="https://lamiastudiodxb.ae/" target="_blank" rel="noopener" class="foot-partner-card" title="Lamia Studio — Official Media Partner">
-      <div class="fpc-logo-box">
-        <img src="assets/lamia-card.png" alt="Lamia Studio — Media Partner" class="foot-partner-logo" loading="lazy">
-      </div>
-      <div class="fpc-meta">
-        <span class="fpc-name">LAMIA STUDIO</span>
-        <span class="fpc-url">www.lamiastudiodxb.ae &nearr;</span>
-      </div>
-    </a>
+    <div class="foot-partner-label">Media Partners</div>
+    <div class="foot-partner-cards">
+      <!-- Lamia Studio -->
+      <a href="https://lamiastudiodxb.ae/" target="_blank" rel="noopener" class="foot-partner-card" title="Lamia Studio — Official Media Partner">
+        <div class="fpc-logo-box">
+          <img src="assets/lamia-card.png" alt="Lamia Studio — Media Partner" class="foot-partner-logo" loading="lazy">
+        </div>
+        <div class="fpc-meta">
+          <span class="fpc-name">LAMIA STUDIO</span>
+          <span class="fpc-url">www.lamiastudiodxb.ae &nearr;</span>
+        </div>
+      </a>
+
+      <!-- Mojo Motions -->
+      <a href="https://www.instagram.com/mojomotions?dlrf=b3hzZWcxMnF0ZGwz" target="_blank" rel="noopener" class="foot-partner-card" title="Mojo Motions — Official Media Partner">
+        <div class="fpc-logo-box">
+          <img src="assets/mojomotions-card.jpg" alt="Mojo Motions — Media Partner" class="foot-partner-logo fpc-logo-sq" loading="lazy">
+        </div>
+        <div class="fpc-meta">
+          <span class="fpc-name">MOJO MOTIONS</span>
+          <span class="fpc-url">@mojomotions &nearr;</span>
+        </div>
+      </a>
+    </div>
   </div>
 
   <div class="footer-credit-row">
